@@ -1,38 +1,89 @@
-/* Add your own styles */
-
-/* Example CSS to style the page */
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Roboto', Arial, sans-serif;
     margin: 0;
     padding: 0;
     background-color: #f4f4f4;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start; /* Align items to the top */
+    height: 100vh;
 }
 
 header {
-    background-color: #333;
+    background-color: #003366; /* Changed background color to dark blue */
     color: white;
-    padding: 10px 0;
+    padding: 20px 0;
     text-align: center;
+    width: 100%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
 }
 
 main {
-    margin: 20px;
+    margin: 140px 20px 20px 20px; /* Adjusted margin to account for fixed header and add more space */
+    text-align: center;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 #controls {
     margin-bottom: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Added deeper shadow under the search bar and buttons */
+    padding: 20px;
+    border-radius: 10px;
+    background-color: #fff;
+    border: 1px solid #ccc; /* Added border to define the area */
 }
 
 #country {
     padding: 10px;
-    width: 200px;
+    width: 300px;
     font-size: 16px;
+    border-radius: 8px; /* Added border radius for the input field */
+    border: 1px solid #ccc;
+    margin-bottom: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Added shadow around the input field */
 }
 
-#lookup {
+/* Common styling for both buttons */
+button {
     padding: 10px 20px;
     font-size: 16px;
     cursor: pointer;
+    border: 2px solid #ccc;
+    border-radius: 8px; /* Added border radius for buttons */
+    background-color: #f1f1f1;
+    transition: background-color 0.3s, border-color 0.3s, box-shadow 0.3s; /* Added transition for shadow */
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2); /* Deeper shadow effect */
+    margin: 5px 2px; /* Reduced space between buttons */
+}
+
+/* Styling for "Lookup" button */
+#lookup {
+    background-color: #4CAF50;
+    color: white;
+}
+
+#lookup:hover {
+    background-color: #45a049;
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.3); /* Deeper shadow effect on hover */
+}
+
+/* Styling for "Lookup Cities" button */
+#lookup-cities {
+    background-color: #2196F3;
+    color: white;
+}
+
+#lookup-cities:hover {
+    background-color: #0b7dda;
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.3); /* Deeper shadow effect on hover */
 }
 
 #result {
@@ -40,6 +91,39 @@ main {
     background-color: white;
     padding: 20px;
     border: 1px solid #ddd;
+    border-radius: 8px; /* Added border radius for the result box */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Centering and styling the table */
+.table-container {
+    text-align: center;
+}
+
+.styled-table {
+    margin: 0 auto;
+    border-collapse: collapse;
+    width: 80%;
+    background-color: #e0f7fa; /* Light blue background for the table */
+}
+
+.styled-table th, .styled-table td {
+    padding: 12px;
+    border: 1px solid #ddd;
+    text-align: left;
+}
+
+.styled-table th {
+    background-color: #f2f2f2;
+    color: #333;
+}
+
+.styled-table tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+.styled-table tr:hover {
+    background-color: #f1f1f1;
 }
 
 li {
